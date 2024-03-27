@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Anime Survey</h1>
+        <p id="description">Help us understand your preferences in anime!</p>
+        <form id="survey-form" method="GET" action="/action_page.php">
+            <div class="form-group">
+                <label id="name-label" for="name">* Name:</label>
+                <input autofocus type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">* Email:</label>
+                <input type="email" name="email" id="email" class="form-control" required placeholder="Enter your Email">
+            </div>
+            <div class="form-group">
+                <label id="age-label" for="age">* Age:</label>
+                <input type="number" name="age" id="age" min="1" max="125" class="form-control" placeholder="Age">
+            </div>
+            <div class="form-group">
+                <label for="favoriteGenre">What are your favorite anime genres? (Check all that apply)</label>
+                <ul id="favoriteGenre" class="checkbox-list">
+                    <li><label><input name="genre" value="action" type="checkbox" class="input-checkbox"> Action</label></li>
+                    <li><label><input name="genre" value="adventure" type="checkbox" class="input-checkbox"> Adventure</label></li>
+                    <li><label><input name="genre" value="comedy" type="checkbox" class="input-checkbox"> Comedy</label></li>
+                    <li><label><input name="genre" value="drama" type="checkbox" class="input-checkbox"> Drama</label></li>
+                    <li><label><input name="genre" value="fantasy" type="checkbox" class="input-checkbox"> Fantasy</label></li>
+                    <li><label><input name="genre" value="horror" type="checkbox" class="input-checkbox"> Horror</label></li>
+                    <li><label><input name="genre" value="romance" type="checkbox" class="input-checkbox"> Romance</label></li>
+                    <li><label><input name="genre" value="sciFi" type="checkbox" class="input-checkbox"> Science Fiction</label></li>
+                    <li><label><input name="genre" value="sliceOfLife" type="checkbox" class="input-checkbox"> Slice of Life</label></li>
+                    <li><label><input name="genre" value="other" type="checkbox" class="input-checkbox"> Other</label></li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="favoriteAnime">What is your favorite anime?</label>
+                <input type="text" id="favoriteAnime" name="favoriteAnime" class="form-control" placeholder="Enter your favorite anime">
+            </div>
+            <div class="form-group">
+                <label for="watchingFrequency">How often do you watch anime in a week?</label>
+                <select id="watchingFrequency" name="watchingFrequency" class="form-control">
+                    <option disabled selected>Select an option</option>
+                    <option value="0-1">1-2 times</option>
+                    <option value="2-3">3-4 times</option>
+                    <option value="4-6">5-6 times</option>
+                    <option value="7+">7+ times</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="platform">Where do you usually watch anime?</label>
+                <select id="platform" name="platform" class="form-control">
+                    <option disabled selected>Select an option</option>
+                    <option value="streaming">Streaming services (e.g., Crunchyroll, Netflix)</option>
+                    <option value="tv">TV channels</option>
+                    <option value="dvd">DVD/Blu-ray</option>
+                    <option value="torrent">Torrent/download</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="recommendation">How likely is that you would recommend this anime to a friend?</label>
+                <ul id="recommendation" class="checkbox-list">
+                    <li><label><input name="recommendation" value="1" type="radio" class="input-radio"> Definitely</label></li>
+                    <li><label><input name="recommendation" value="2" type="radio" class="input-radio"> Maybe</label></li>
+                    <li><label><input name="recommendation" value="3" type="radio" class="input-radio"> Not sure</label></li>
+                    <li><label><input name="recommendation" value="4" type="radio" class="input-radio"> Not recommended</label></li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="comments">Any Comments or Suggestions?</label>
+                <textarea id="comments" class="form-control" style="resize: vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <button id="submit" type="submit" class="submit-button">Submit</button>
+            <p class="copyright">&copy; Created by Mohammad Ali Dimacaling</p>
+        </form>
+    </div>
+</body>
+</html>
